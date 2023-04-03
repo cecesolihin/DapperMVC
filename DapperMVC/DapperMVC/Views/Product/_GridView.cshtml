@@ -1,0 +1,57 @@
+﻿@using System;
+@using DapperMVC.Models;
+@{
+    IList<Product> lisData = (IList<Product>)ViewData["listProduct"];
+    //var role = ViewData["isAdmin"];
+}
+
+<div class="container">
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="" style="overflow-x:scroll; ">
+                <table id="gridProduct" class="table table-striped table-bordered" style="font-size:12px">
+                    <thead>
+                        <tr>
+                            <th style="width: 30px; text-align: center">No</th>
+                            <th style="width:100px; text-align:center">Product No</th>
+                            <th style="width: 150px; text-align: center">Product Name</th>
+                            <th style="width: 100px; text-align: center">Price</th>
+                            <th style="width: 100px; text-align: center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (lisData == null || lisData.Count == 0)
+                        {
+                            <tr><td colspan="5"></td></tr>
+                        }
+                        else
+                        {
+                            var num = 1;
+                            foreach (var data in lisData)
+                            {
+                                <tr>
+                                    <td style="width: 30px; text-align: center">@num</td>
+                                    <td style="width:100px; text-align:center">@data.ProductId</td>
+                                    <td style="width: 150px; text-align: left">@data.ProductName</td>
+                                    <td style="width: 100px; text-align: right">@data.Price</td>
+                                    <td style="width: 100px; text-align: center">
+                                        <a href="#" onclick="getUpdatePopUp('@data.ProductId')" style="color:#2B7316;" title="Edit" class="">Edit</a> &nbsp;
+                                        <a href="#" onclick="getDeletePopUp('@data.ProductId')" style="color:#2B7316;" title="Delete">Delete</a>
+                                    </td>
+                                </tr>
+                                num++;
+                            }
+                        
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                @*@Html.Partial("_Pagination")*@
+
+            </div>
+        </div>
+    </div>
+</div>

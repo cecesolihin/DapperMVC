@@ -1,0 +1,14 @@
+Install-Package Dapper 1.50.2
+Framework 4.5
+
+https://stackoverflow.com/questions/52358456/how-to-model-one-to-many-relationship-with-dapper-and-asp-net-mvc
+https://www.codeproject.com/Tips/1168151/CRUD-Screen-using-ASP-NET-MVC-dapper-and-jTable-in
+http://www.codedigest.com/posts/44/developing-simple-crud-create-read-update-and-delete-operations-in-aspnet-mvc-using-dapper
+
+
+<link href="~/Content/bootstrap 4.5.3/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="~/Content/bootstrap 4.5.3/js/bootstrap.bundle.js"></script>
+<script src="~/Content/bootstrap 4.5.3/js/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap 4.5.3/css/font-awesome.min.css" rel="stylesheet" />
+<script src="~/Scripts/popper.min.js"></script>
